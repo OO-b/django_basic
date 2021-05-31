@@ -19,12 +19,10 @@ def hello_world(request):
         new_hello_world.save()
 
         hello_world_list = HelloWorld.objects.all()
-
         return HttpResponseRedirect(reverse('accountapp:hello_world'))
             # render(request, 'accountapp/helloworld.html', context={'hello_world_list': hello_world_list})
 
     else:
 
         hello_world_list = HelloWorld.objects.all()
-
         return render(request, 'accountapp/helloworld.html', context={'hello_world_list': hello_world_list})

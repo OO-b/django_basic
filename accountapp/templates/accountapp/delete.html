@@ -4,9 +4,9 @@
 
   <div style="text-align:center">
     <div class=""mb-4>
-      <h4>Change Info</h4>
+      <h4>Quit</h4>
     </div>
-    <form action="{% url 'accountapp:update' pk=target_user.pk %}" method="post">
+    <form action="{% url 'accountapp:delete' pk=target_user.pk %}" method="post">
       {% csrf_token %}
       {{ form }}
       <input type="submit" class="btn btn-primary">

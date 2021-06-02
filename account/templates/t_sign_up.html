@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Please, Sure</title>
+</head>
+<body>
+
+	<div class="wrap">
+		<div class="bg_con"></div>
+		<div id="container">
+		<section id="contents" class="">
+			<div class="contents_inner admin_3_inner cf">
+                <form id="usr_join_form" name="usr_join_form" action="{% url 'account:t_sign_up' %}" method="post">
+					{% csrf_token %}
+                <h2 class="mg_left_30">사용자 회원 가입</h2>
+					<div class="ad_con_box shadow_1 cf">
+						<div class="fll">
+						<table class="table_2">
+							<caption class="hide">메뉴추가</caption>
+							<colgroup>
+                                <col width ="10%">
+								<col width ="40%">
+								<col width ="20%">
+								<col width ="30%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>아이디<span class="red">&nbsp; *</span></th>
+									<td>
+										<div class="input_box  inline-block">
+											<input type="text" name="user" id="user" placeholder="영문/숫자 4자 이상">
+										</div>
+                                        &nbsp;
+                                        <div class="check  inline-block"><a onclick="user_check();">중복체크</a></div>
+                                        <input id="user_chk" name="user_chk" value="" type="text" style="display:none">
+                                    </td>
+
+                                    <th>이름</th>
+                                    <td>
+                                        <div class="input_box">
+											<input type="text" name="user_name" id="user_name" placeholder="50글자 이내">
+										</div>
+                                    <td>
+                                </tr>
+                                <tr>
+									<th>비밀번호<span class="red">&nbsp; *</span></th>
+									<td>
+										<div class="input_box">
+											<input type="password" name="password" id="password" placeholder="영문/숫자 4자이상">
+										</div>
+                                    </td>
+                                    <th>비밀번호확인<span class="red">&nbsp; *</span></th>
+									<td>
+										<div class="input_box">
+											<input type="password" name="password2" id="password2" placeholder="영문/숫자 4자이상">
+										</div>
+									</td>
+                                </tr>
+
+                                <tr>
+									<th>이메일<span class="red">&nbsp; *</span></th>
+									<td>
+										<div class="input_box">
+											<input type="text" name="user_email" id="user_email"  class="w200">
+										</div>
+									</td>
+                                    <th>연락처<span class="red">&nbsp; *</span></th>
+									<td>
+										<div class="input_box">
+											<input type="text" name="user_tel" id="user_tel" class="w200" placeholer="010123456789" onkeyup="inputPhoneNumber(this);"/>
+										</div>
+									</td>
+                                </tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+                        <button type="submit" >가입하기</button>
+                </form>
+
+			</div><!-- contents_inner -->
+		</section>
+
+		</div>
+	</div>
+
+</body>
+</html>

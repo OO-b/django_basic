@@ -1,4 +1,5 @@
 from django.urls import path
+from django.contrib.auth import views as auth_views
 
 import account
 from . import views
@@ -7,7 +8,5 @@ from . import views
 app_name = "account"
 
 urlpatterns = [
-    path('t_login/', views.t_login, name="t_login"),
-    path('t_sign_up/', views.t_sign_up, name="t_sign_up"),
 
 ]

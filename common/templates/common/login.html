@@ -22,9 +22,9 @@
 		<div id="container">
 			<section id="content" class="login_box">
 				<div class="logo_area">
-					<img src="/images/logo/logo2.png" alt="로고이미지" >
-				</div>
-				<form name="login" action="" method="post">
+로그인페이지	11
+                </div>
+				<form name="login" action="{% url 'common:login' %}" method="post">
 					{% csrf_token %}
 					{% include "form_errors.html" %}
 					<div class="input_wrap">
@@ -44,9 +44,6 @@
 					<button id="login" class="btn_1">로그인</button>
 
 				</form>
-                    <div>
-                        <a href="{% url 'account:t_sign_up'%}"><button type="button" class="btn_4_shrt f-left">사용자 회원가입</button></a>
-                    </div>
 					<div class='reset_password'><a href="/auth/password_reset">비밀번호 찾기</a></div>
 			</section>
 

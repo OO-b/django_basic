@@ -37,3 +37,5 @@ def t_sign_up(request):
     else:
         return render(request, 't_sign_up.html')
 
+
+
